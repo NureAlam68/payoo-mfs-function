@@ -28,11 +28,11 @@
                     <div class="flex gap-2">
                         <button id="btn-show-add-money" class="btn btn-secondary">Add Money</button>
                         <button id="btn-show-cash-out" class="btn btn-secondary">Cash Out</button>
-                        <button id="btn-show-cash-out" class="btn btn-secondary">Transactions</button>
+                        <button id="btn-show-transactions" class="btn btn-secondary">Transactions</button>
                     </div>
                     <div class="divider"></div>
                     <!-- add money form start -->
-                    <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -47,14 +47,14 @@
                                 <input id="input-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
-                                <button id="btn-add-money" class="btn btn-secondary">Add Money</button>
+                                <button id="btn-add-money" class="btn btn-primary">Add Money</button>
                             </div>
                         </form>
                     </div>
                     <!-- add money form end -->
                     
                     <!-- cash out start -->
-                    <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -74,6 +74,12 @@
                         </form>
                     </div>
                     <!-- cash out end -->
+                    
+                    <!-- transactions start -->
+                    <div id="transaction-section" class="hidden">
+                        <h1 class="text-5xl text-center">transactions History....</h1>
+                    </div>
+                    <!-- transactions end -->
                 </div>
             </div>
         </div>
@@ -81,6 +87,7 @@
     <script src="js/utilities.js"></script>
     <script src="/js/addmoney.js"></script>
     <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>
