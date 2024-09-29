@@ -16,15 +16,28 @@
             <div class="camera"></div>
             <div class="display">
                 <div class="artboard artboard-demo phone-3">
-                    <div class="stats shadow">
-                        <!-- available balance -->
-                        <div class="stat">
-                            <div id="account-balance" class="stat-value">9400</div>
-                            <div class="stat-desc">Available Balance</div>
+                    <div class="flex gap-24">
+                        <div class="bg-slate-100 rounded">
+                            <!-- available balance -->
+                            <div class="stat">
+                                <div id="account-balance" class="stat-value text-2xl">9400</div>
+                                <div class="stat-desc font-bold">Available Balance</div>
+                            </div>
                         </div>
+                        <button id="logout-btn" class="btn btn-default btn-sm mt-5">
+                            Log out
+                        </button>
                     </div>
                     <div class="divider"></div>
                     <!-- user action -->
+                    <div class="px-8 mb-4">
+                        <h3 class="text-2xl font-bold">
+                            🔥 Welcome to Payooo!
+                        </h3>
+                        <p class="mt-2 text-[#08080880]">
+                            Enjoy easy and convenient financial services with us. Cashout charge is low and 
+                        </p>
+                    </div>
                     <div class="flex gap-2">
                         <button id="btn-show-add-money" class="btn btn-secondary">Add Money</button>
                         <button id="btn-show-cash-out" class="btn btn-secondary">Cash Out</button>
@@ -38,13 +51,15 @@
                                 <label class="label">
                                     <span class="label-text">Amount to Add</span>
                                 </label>
-                                <input id="input-add-money" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                                <input id="input-add-money" type="text" placeholder="Add Amount to withdraw"
+                                    class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text">Pin Number</span>
                                 </label>
-                                <input id="input-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" autocomplete="off" required />
+                                <input id="input-pin-number" type="password" placeholder="Enter 4 digit pin number"
+                                    class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
                                 <button id="btn-add-money" class="btn btn-primary">Add Money</button>
@@ -52,7 +67,7 @@
                         </form>
                     </div>
                     <!-- add money form end -->
-                    
+
                     <!-- cash out start -->
                     <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
@@ -60,13 +75,15 @@
                                 <label class="label">
                                     <span class="label-text">Amount to Cash Out</span>
                                 </label>
-                                <input id="input-out-money" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                                <input id="input-out-money" type="text" placeholder="Add Amount to withdraw"
+                                    class="input input-bordered" required />
                             </div>
                             <div class="form-control">
                                 <label class="label">
                                     <span class="label-text">Pin Number</span>
                                 </label>
-                                <input id="cash-out-pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" autocomplete="off" required />
+                                <input id="cash-out-pin" type="password" placeholder="Enter 4 digit pin number"
+                                    class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
                                 <button id="btn-out-money" class="btn btn-primary">Cash Out</button>
@@ -74,16 +91,20 @@
                         </form>
                     </div>
                     <!-- cash out end -->
-                    
+
                     <!-- transactions start -->
-                    <div id="transaction-section" class="hidden">
-                        <h1 class="text-5xl text-center">transactions History....</h1>
+                    <div id="transaction-section" class="hidden overflow-y-auto h-[40%] w-[90%]">
+                        <h1 class="text-3xl text-center font-bold">Transactions History</h1>
+                        <div id="transaction-container" class="space-y-2 mt-5">
+
+                        </div>
                     </div>
                     <!-- transactions end -->
                 </div>
             </div>
         </div>
     </main>
+    <script src="js/logout.js"></script>
     <script src="js/utilities.js"></script>
     <script src="/js/addmoney.js"></script>
     <script src="js/cashOut.js"></script>
